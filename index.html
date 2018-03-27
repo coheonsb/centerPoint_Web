@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="./mdl/material.css">
   <script defer src="./mdl/material.js"></script>
+  <script defer src="./src/prism.js"></script>
+  <link rel="stylesheet" href="./src/prism-default.css">
 
   <style>
     /* Always set the map height explicitly to define the size of the div
@@ -59,6 +61,13 @@
       font-family: Roboto;
     }
 
+    .pac-container:after {
+    /* Disclaimer: not needed to show 'powered by Google' if also a Google Map is shown */
+
+    background-image: none !important;
+    height: 0px;
+}
+
     #type-selector {
       color: #fff;
       background-color: #4d90fe;
@@ -77,85 +86,141 @@
   </style>
 
 </head>
-<header>
-</header>
+
+<link href="./src/components.css" rel="stylesheet">
+<script src="./src/snippets.js"></script>
+<script src="./src/components.js"></script>
+
 <body>
   <script src="./object/centerPointMain.js"></script>
   <script src="./object/centerMap.js"></script>
 
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+
+
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <!-- Title -->
         <span class="mdl-layout-title">Title</span>
       </div>
-      <!-- Tabs -->
-      <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-        <a href="#fixed-tab-1" class="mdl-layout__tab mdl-layout__link is-active">Tab 1</a>
-        <a href="#fixed-tab-2" class="mdl-layout__tab mdl-layout__link">Tab 2</a>
-        <a href="#fixed-tab-3" class="mdl-layout__tab mdl-layout__link" onclick="return resizeMap();">Tab 3</a>
-      </div>
-    </header>
-    <div class="mdl-layout__drawer">
-      <span class="mdl-layout-title">Title</span>
-    </div>
-    <main class="mdl-layout__content" id="mainClass">
-      <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
-        <div class="page-content">
-          <!-- Your content goes here -->
-
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">시작</button>
-
-        </div>
-      </section>
-      <section class="mdl-layout__tab-panel" id="fixed-tab-2">
-        <div class="page-content">
-          <!-- Your content goes here -->
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
-
-            <select class="mdl-textfield__input" id="octane" name="octane">
-              <option></option>
-              <option value="1p">1명</option>
-              <option value="2p">2명</option>
-              <option value="3p">3명</option>
-              <option value="4p">4명</option>
-              <option value="5p">5명</option>
-              <option value="6p">6명</option>
-            </select>
-            <label class="mdl-textfield__label" for="octane">인원</label>
-            <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-          </div>
-          <br>
-          <br>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
-            <input type="text" value="" class="mdl-textfield__input" id="sample5" readonly>
-            <input type="hidden" value="" name="sample5">
-            <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
-            <label for="sample5" class="mdl-textfield__label">인원</label>
-            <ul for="sample5" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
-              <li class="mdl-menu__item" data-val="1p">1명</li>
-              <li class="mdl-menu__item" data-val="2p">2명</li>
-              <li class="mdl-menu__item" data-val="3p">3명</li>
-              <li class="mdl-menu__item" data-val="4p">4명</li>
-              <li class="mdl-menu__item" data-val="5p">5명</li>
-              <li class="mdl-menu__item" data-val="6p">6명</li>
-            </ul>
-          </div>
-        </div>
-      </section>
       
-      <section class="mdl-layout__tab-panel" id="fixed-tab-3">
-        <div class="page-content">
-          <!-- Your content goes here -->
-          <input id="pac-input" class="controls" type="text" placeholder="장소 검색"> 
-          <div id="map"></div>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1LWe638U2dyrLBLFjXfX2apj5-ePRxos&libraries=places&callback=initAutocomplete" async defer></script>
+    </header>
+
+
+
+     <div class="mdl-components mdl-js-components mdl-cell mdl-cell--12-col">
+    <aside class="mdl-components__nav docs-text-styling mdl-shadow--4dp">
+      
+      <a href="#Tab1" class="mdl-components__link mdl-component badges">
+        <div class="mdl-components__link-image" >
+        </div>
+        <span class="mdl-components__link-text">Badges</span>
+      </a>
+      
+      <a href="#Tab2" class="mdl-components__link mdl-component buttons">
+        <div class="mdl-components__link-image" >
+        </div>
+        <span class="mdl-components__link-text">Buttons</span>
+      </a>
+      
+      <a href="#Tab3" class="mdl-components__link mdl-component cards">
+        <div class="mdl-components__link-image" >
+        </div>
+        <span class="mdl-components__link-text">Cards</span>
+      </a>
+    </aside>
+
+    <main class="mdl-components__pages" id="mainClass">
+      <section id="Tab0" class="mdl-components-index mdl-components__page is-active">
+        <div class="mdl-cell mdl-cell--12-col">
+          
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="return pageControl(Tab0,Tab1)">시작</button>
+    
+        </div>
+      
+      </section>
+  
+      <section id="Tab1" class="mdl-components__page mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
+
+
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+                
+                 <select class="mdl-textfield__input" id="Tab1_select" name="octane" onchange="peopleCount(value);">
+                  
+            
+                   <option value="2">2명</option>
+                   <option value="3">3명</option>
+                   <option value="4">4명</option>
+                   <option value="5">5명</option>
+                   <option value="6">6명</option>
+                 </select>
+                 <!-- <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i> -->
+                 <label class="mdl-textfield__label" for="Tab1_select">인원</label>
+                 
+               </div>
+
+
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="pageControl(Tab1,Tab2), tab2ListCreate()" >확인</button>
+
+
         </div>
       </section>
+  
+  
+      
+      <section id="Tab2" class="mdl-components__page mdl-grid">
+        <div class="mdl-cell mdl-cell--12-col">
 
-    </main>
-   
-  </div>
+
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+                
+                 <select class="mdl-textfield__input" id="Tab2_select" name="octane" onchange="peopleCount(value), tab2ListCreate()">
+               
+                   <option value="2" selected>2명</option>
+                   <option value="3">3명</option>
+                   <option value="4">4명</option>
+                   <option value="5">5명</option>
+                   <option value="6">6명</option>
+                 </select>
+                 <!-- <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i> -->
+                 <label class="mdl-textfield__label" for="Tab2_select">인원</label>
+                 
+               </div>
+               <br>
+               <br>
+
+               <ul style="list-style-type:none" id = "Tab2_li">
+               
+              </ul>
+               
+     
+     
+     
+        
+        </div>
+      </section>
+      <section id="Tab3" class="mdl-components__page mdl-grid">
+     
+          <div class="mdl-cell mdl-cell--12-col">
+
+              <input id="pac-input" class="controls" type="text" placeholder="장소 검색"> 
+             
+              <div id="map"></div>
+              <script>
+                  if(document.getElementsByClassName("mdl-components__page mdl-grid") != undefined){
+                    resizeMap();
+                  }
+                  </script>
+              <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1LWe638U2dyrLBLFjXfX2apj5-ePRxos&libraries=places&callback=initAutocomplete" async defer></script>
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="" >확인</button>
+
+          </div>
+        </section>
+  
+      
+      </main>
+    </div>
+
 
 </body>
 

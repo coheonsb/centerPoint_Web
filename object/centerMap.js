@@ -61,7 +61,7 @@
                     // Create a marker for each place.
                     markers.push(new google.maps.Marker({
                       map: map,
-                      icon: icon,
+                      // icon: icon,
                       title: place.name,
                       position: place.geometry.location
                     }));
@@ -75,10 +75,10 @@
                   });
                   console.log(markers[0].position.lat(), markers[0].position.lng())
         
-                  C.position.push({
+                  C.position[C.peopleIndex]={
                     lat: markers[0].position.lat(),
                     lng: markers[0].position.lng()
-                  });
+                  };
                   map.fitBounds(bounds);
                 });
               }
