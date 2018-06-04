@@ -49,6 +49,11 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
+    <icon src="res/screen/android/res.png" />
+    <icon density="mdpi" src="res/screen/android/mdpi.png" />
+    <icon density="hdpi" src="res/screen/android/hdpi.png" />
+    <icon density="xhdpi" src="res/screen/android/xhdpi.png" />
+    <icon density="xxhdpi" src="res/screen/android/xxhdpi.png" />
     <splash density="port-hdpi" src="res/screen/android/logo.png" />
     <splash density="port-ldpi" src="res/screen/android/logo.png" />
     <splash density="port-mdpi" src="res/screen/android/logo.png" />

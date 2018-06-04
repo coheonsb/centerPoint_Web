@@ -58,11 +58,11 @@ function initAutocomplete() {
     if (places.length == 0) {
       return;
     }
-
+    C.map.markers = [];
     C.map.markers.forEach(function (marker) {
       C.map.marker.setMap(null);
     });
-    C.map.markers = [];
+    
     var bounds = new google.maps.LatLngBounds();
     places.forEach(function (place) {
       if (!place.geometry) {
@@ -176,6 +176,7 @@ function removeMarkers(){
   for(var i=0; i<C.map.markers.length; i++){
     C.map.markers[i].setMap(null);
   }
+  C.map.markers=[];
 }
 
 

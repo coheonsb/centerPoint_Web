@@ -1,60 +1,62 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.cheon.centerPoint" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>centerPoint_Web</name>
-  <description>
+    <name>centerPoint_Web</name>
+    <description>
     너와 나의 연결 거리
   </description>
-  <author email="coheonsb@gmail.com" href="http://cordova.io">
+    <author email="coheonsb@gmail.com" href="http://cordova.io">
     너와 나의 연결 거리
   </author>
-  <content src="index.html" />
-  <access origin="*" />
-  <allow-intent href="http://*/*" />
-  <allow-intent href="https://*/*" />
-  <allow-intent href="tel:*" />
-  <allow-intent href="sms:*" />
-  <allow-intent href="mailto:*" />
-  <allow-intent href="geo:*" />
-  <platform name="android">
-    <preference name="android-minSdkVersion" value="20" />
-    <allow-intent href="market:*" />
-    <icon src="res/screen/android/mdpi.png" density="mdpi" />
-    <icon src="res/screen/android/hdpi.png" density="hdpi" />
-    <icon src="res/screen/android/xhdpi.png" density="xhdpi" />
-    <icon src="res/screen/android/xxhdpi.png" density="xxhdpi" />
-    <splash density="port-hdpi" src="res/screen/android/logo.png" />
-    <splash density="port-ldpi" src="res/screen/android/logo.png" />
-    <splash density="port-mdpi" src="res/screen/android/logo.png" />
-    <splash density="port-xhdpi" src="res/screen/android/logo.png" />
-    <splash density="land-hdpi" src="res/screen/android/logo.png" />
-    <splash density="land-ldpi" src="res/screen/android/logo.png" />
-    <splash density="land-mdpi" src="res/screen/android/logo.png" />
-    <splash density="land-xhdpi" src="res/screen/android/logo.png" />
-  </platform>
-  <platform name="ios">
-    <allow-intent href="itms:*" />
-    <allow-intent href="itms-apps:*" />
-    <preference name="BackupWebStorage" value="none" />
-    <icon src="res/screen/ios/icon-40.png" width="40" height="40" />
-    <icon src="res/screen/ios/icon-58.png" width="58" height="58" />
-  </platform>
-  <platform name="browser">
-    <preference name="SplashScreenBackgroundColor" value="#8aacc8" />
-  </platform>
-  <preference name="DisallowOverscroll" value="true" />
-  <engine name="ios" spec="^4.5.4" />
-  <engine name="android" spec="^7.0.0" />
-  <plugin name="cordova-plugin-whitelist" spec="~1.2.0" />
-  <plugin name="cordova-plugin-console" spec="~1.0.1" />
-  <plugin name="cordova-plugin-statusbar" spec="~1.0.1" />
-  <plugin name="cordova-plugin-battery-status" spec="^2.0.2" />
-  <plugin name="cordova-plugin-camera" spec="^4.0.3" />
-  <plugin name="cordova-plugin-contacts" spec="^3.0.1" />
-  <plugin name="cordova-plugin-device" spec="^2.0.2" />
-  <plugin name="cordova-plugin-device-motion" spec="^2.0.1" />
-  <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
-  <plugin name="cordova-plugin-vibration" spec="^3.1.0" />
-  <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
-  <plugin name="cordova-plugin-x-socialsharing" spec="^5.4.0" />
-  <engine name="browser" spec="~5.0.3" />
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <preference name="android-minSdkVersion" value="20" />
+        <allow-intent href="market:*" />
+        <icon src="res/screen/android/res.png" />
+        <icon density="mdpi" src="res/screen/android/mdpi.png" />
+        <icon density="hdpi" src="res/screen/android/hdpi.png" />
+        <icon density="xhdpi" src="res/screen/android/xhdpi.png" />
+        <icon density="xxhdpi" src="res/screen/android/xxhdpi.png" />
+        <splash density="port-hdpi" src="res/screen/android/logo.png" />
+        <splash density="port-ldpi" src="res/screen/android/logo.png" />
+        <splash density="port-mdpi" src="res/screen/android/logo.png" />
+        <splash density="port-xhdpi" src="res/screen/android/logo.png" />
+        <splash density="land-hdpi" src="res/screen/android/logo.png" />
+        <splash density="land-ldpi" src="res/screen/android/logo.png" />
+        <splash density="land-mdpi" src="res/screen/android/logo.png" />
+        <splash density="land-xhdpi" src="res/screen/android/logo.png" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <preference name="BackupWebStorage" value="none" />
+        <icon height="40" src="res/screen/ios/icon-40.png" width="40" />
+        <icon height="58" src="res/screen/ios/icon-58.png" width="58" />
+        <splash height="2560" src="res/screen/ios/logo.png" width="1440" />
+    </platform>
+    <platform name="browser">
+        <preference name="SplashScreenBackgroundColor" value="#8aacc8" />
+    </platform>
+    <preference name="DisallowOverscroll" value="true" />
+    <plugin name="cordova-plugin-whitelist" spec="~1.2.0" />
+    <plugin name="cordova-plugin-console" spec="~1.0.1" />
+    <plugin name="cordova-plugin-statusbar" spec="~1.0.1" />
+    <plugin name="cordova-plugin-battery-status" spec="^2.0.2" />
+    <plugin name="cordova-plugin-camera" spec="^4.0.3" />
+    <plugin name="cordova-plugin-contacts" spec="^3.0.1" />
+    <plugin name="cordova-plugin-device" spec="^2.0.2" />
+    <plugin name="cordova-plugin-device-motion" spec="^2.0.1" />
+    <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
+    <plugin name="cordova-plugin-vibration" spec="^3.1.0" />
+    <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
+    <plugin name="cordova-plugin-x-socialsharing" spec="^5.4.0" />
+    <engine name="ios" spec="^4.5.4" />
+    <engine name="android" spec="^7.0.0" />
+    <engine name="browser" spec="^5.0.3" />
 </widget>

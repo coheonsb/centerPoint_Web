@@ -4,15 +4,6 @@
 <head>
   <meta charset="utf-8">
   <script src="jquery-3.3.1.js"></script>
-  <!--
-  Customize this policy to fit your own app's needs. For more guidance, see:
-      https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-  Some notes:
-      * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-      * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-      * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-          * Enable inline JS: add 'unsafe-inline' to default-src
-  -->
   <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap: content:">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -123,6 +114,12 @@
         <div class="tabs-animated-wrap">
           <div class="navbar" style="background-color: #8aacc8">
             <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="link back" id="back-button">
+                      <i class="icon icon-back" onclick="history.back();"></i>
+                      <span class="ios-only">Back</span>
+                    </a>
+                  </div>
               <div class="title sliding">연결 거리</div>
             </div>
           </div>

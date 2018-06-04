@@ -38,6 +38,7 @@ function anchorControl() {
     $('#back-button').hide()
   }
   else if(slide == 3){
+    $('#back-button').show()
     C.map.setCenter({lat:37.56,lng:126.97});
     C.map.setZoom(15);
   }
@@ -85,8 +86,8 @@ function setLocation(i) {
 }
 
 function sharePosition(i) {
-var url = 'http://m.map.naver.com/route.nhn?menu=route&sname='+C.position[i].name+'&sx='+C.position[i].lng+'&sy='+C.position[i].lat+'&ename='+C.centerPosition.name+'&ex='+C.centerPosition.lng+'&ey='+C.centerPosition.lat+'&pathType=1&showMap=true';
-window.plugins.socialsharing.share('[너와 나의 연결 거리]', null, null, url);
+var url = 'http://m.map.naver.com/route.nhn?menu=route&sname='+C.position[i].name.replace(/ /g, '')+'&sx='+C.position[i].lng+'&sy='+C.position[i].lat+'&ename='+C.centerPosition.name.replace(/ /g, '')+'&ex='+C.centerPosition.lng+'&ey='+C.centerPosition.lat+'&pathType=1&showMap=true';
+window.plugins.socialsharing.share('[너와 나의 연결 거리]\n'+C.position[i].name+' -> '+C.centerPosition.name+'의 길찾기 결과입니다.\n', null, null, url);
 }
 
 function findCenter() {
