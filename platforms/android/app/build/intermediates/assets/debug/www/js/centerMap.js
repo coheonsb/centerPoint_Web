@@ -18,14 +18,17 @@ function initAutocomplete() {
     searchBox.setBounds(C.map.getBounds());
   });
   var geocoder = new google.maps.Geocoder;
+  if(C.map.markers != undefined){
+    removeMarkers();
+  }
   C.map.markers = [];
   C.map.addListener('click', function (e) {
-    // placeMarkerAndPanTo(e.latLng, map);
-    console.log(e);
-    removeMarkers();
+    if(C.map.markers != undefined){
+      removeMarkers();
+    }
+    C.map.markers = [];
     C.map.markers.push(new google.maps.Marker({
       map: C.map,
-      // title: place.name,
       position: e.latLng
     }));
     C.map.panTo(e.latLng);
@@ -40,7 +43,7 @@ function initAutocomplete() {
         );
           C.position[C.peopleIndex].name = results[1].address_components[1].short_name +" "+ results[1].address_components[0].short_name
           
-          $("#placeString_d_" + C.peopleIndex).text(results[1].address_components[1].short_name +" "+ results[1].address_components[0].short_name
+          $("#placeString_d_" + C.peopleIndex).text("출발지 : "+results[1].address_components[1].short_name +" "+ results[1].address_components[0].short_name
         );
         } else {
           window.alert('No results found');
@@ -58,11 +61,14 @@ function initAutocomplete() {
     if (places.length == 0) {
       return;
     }
-
+    if( C.map.markers != undefined){
+      removeMarkers();
+    }
+    C.map.markers=[];
     C.map.markers.forEach(function (marker) {
       C.map.marker.setMap(null);
     });
-    C.map.markers = [];
+    
     var bounds = new google.maps.LatLngBounds();
     places.forEach(function (place) {
       if (!place.geometry) {
@@ -76,7 +82,7 @@ function initAutocomplete() {
         anchor: new google.maps.Point(17, 34),
         scaledSize: new google.maps.Size(25, 25)
       };
-      removeMarkers();
+
       C.map.markers.push(new google.maps.Marker({
         map: C.map,
         title: place.name,
@@ -99,7 +105,7 @@ function initAutocomplete() {
     };
     $("#placeString_" + C.peopleIndex).text(places[0].name);
     C.position[C.peopleIndex].name = places[0].name
-    $("#placeString_d_" + C.peopleIndex).text(places[0].name);
+    $("#placeString_d_" + C.peopleIndex).text("출발지 : "+places[0].name);
     C.map.fitBounds(bounds);
   });
   C.map2;
