@@ -18,14 +18,13 @@ function initAutocomplete() {
     searchBox.setBounds(C.map.getBounds());
   });
   var geocoder = new google.maps.Geocoder;
+  if( C.map.markers != undefined){
+    removeMarkers();
+  }
   C.map.markers = [];
   C.map.addListener('click', function (e) {
-    // placeMarkerAndPanTo(e.latLng, map);
-    console.log(e);
-    removeMarkers();
     C.map.markers.push(new google.maps.Marker({
       map: C.map,
-      // title: place.name,
       position: e.latLng
     }));
     C.map.panTo(e.latLng);
@@ -58,7 +57,10 @@ function initAutocomplete() {
     if (places.length == 0) {
       return;
     }
-    C.map.markers = [];
+    if( C.map.markers != undefined){
+      removeMarkers();
+    }
+    C.map.markers=[];
     C.map.markers.forEach(function (marker) {
       C.map.marker.setMap(null);
     });
@@ -76,7 +78,7 @@ function initAutocomplete() {
         anchor: new google.maps.Point(17, 34),
         scaledSize: new google.maps.Size(25, 25)
       };
-      removeMarkers();
+
       C.map.markers.push(new google.maps.Marker({
         map: C.map,
         title: place.name,
@@ -176,7 +178,6 @@ function removeMarkers(){
   for(var i=0; i<C.map.markers.length; i++){
     C.map.markers[i].setMap(null);
   }
-  C.map.markers=[];
 }
 
 

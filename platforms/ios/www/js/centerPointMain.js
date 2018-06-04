@@ -38,7 +38,8 @@ function anchorControl() {
     $('#back-button').hide()
   }
   else if(slide == 3){
-    $('#back-button').show()
+    $('#back-button').show();
+    removeMarkers();
     C.map.setCenter({lat:37.56,lng:126.97});
     C.map.setZoom(15);
   }
