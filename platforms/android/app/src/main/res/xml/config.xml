@@ -35,11 +35,11 @@
     </feature>
     <name>centerPoint_Web</name>
     <description>
-        너와 나의 연결 거리
-    </description>
+    너와 나의 연결 거리
+  </description>
     <author email="coheonsb@gmail.com" href="http://cordova.io">
-        너와 나의 연결 거리
-    </author>
+    너와 나의 연결 거리
+  </author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

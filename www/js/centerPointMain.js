@@ -32,7 +32,17 @@ function anchorControl() {
   if (slide > 1 && slide < 10)
     goToTab(parseInt(slide));
   else {
-    goToTab(1);
+    goToTab(2);
+  }
+  if(slide == 1 || slide == 2){
+    $('#back-button').hide()
+  }
+  else if(slide == 3){
+    C.map.setCenter({lat:37.56,lng:126.97});
+    C.map.setZoom(15);
+  }
+  else{
+    $('#back-button').show()
   }
 
 }
@@ -51,10 +61,10 @@ function tab2ListCreate() {
   $("#Tab2_li").empty()
   $("#Tab2_li_d").empty()
   for (var i = 0; i < C.people; i++) {
-    $("#Tab2_li").append('<div id="Tab2_li_' + i + '" style="background: #68b5cc; position:relative; height:45px; width: 90%; margin-left: auto; margin-right: auto; border-radius: 10px"> <img src="./img/p' + i + '.png"  style="height: 30px; width:30px; position:absolute; left:20px; top:12%"> <p id="placeString_'+i+'" style="height: 30px; width:100%; position:absolute; left:0%; top:0%;color: white;"> ' + (i + 1) + '번이용자 </p><img src="./img/d.png"  style="height: 30px; width:30px; position:absolute; right:20px; top:12%" onclick="pageControl(4),setLocation(' + i + ')"></div><br>');
-    $("#Tab2_li_d").append('<br><div id="Tab2_li_' + i + '" style="background: #68b5cc; position:relative; height:45px; width: 90%; margin-left: auto; margin-right: auto; border-radius: 10px"> <img src="./img/p' + i + '.png"  style="height: 30px; width:30px; position:absolute; left:20px; top:12%"> <p id="placeString_d_'+i+'" style="height: 30px; width:100%; position:absolute; left:0%; top:0%;color: white;"> ' + (i + 1) + '번이용자 </p><img src="./img/s.png"  style="height: 30px; width:30px; position:absolute; right:20px; top:12%" onclick="sharePosition('+i+')"></div>');
+    $("#Tab2_li").append('<div id="Tab2_li_' + i + '" class="button" onclick="pageControl(4),setLocation(' + i + ')" style="background: #68b5cc; position:relative; height:45px; width: 90%; margin-left: auto; margin-right: auto; border-radius: 10px"> <img src="./img/p' + i + '.png"  style="height: 30px; width:30px; position:absolute; left:20px; top:12%"> <p id="placeString_'+i+'" style="height: 30px; width:100%; position:absolute; left:0%; top:-20%;color: white;"> ' + (i + 1) + '번이용자 </p><img src="./img/d.png"  style="height: 30px; width:30px; position:absolute; right:20px; top:12%" ></div><br>');
+    $("#Tab2_li_d").append('<br><div id="Tab2_li_' + i + '" class="button" onclick="sharePosition('+i+')" style="background: #68b5cc; position:relative; height:45px; width: 90%; margin-left: auto; margin-right: auto; border-radius: 10px"> <img src="./img/p' + i + '.png"  style="height: 30px; width:30px; position:absolute; left:20px; top:12%"> <p id="placeString_d_'+i+'" style="height: 30px; width:100%; position:absolute; left:0%; top:-20%;color: white;"> ' + (i + 1) + '번이용자 </p><img src="./img/s.png"  style="height: 30px; width:30px; position:absolute; right:20px; top:12%" ></div>');
   }
-  $("#Tab2_li").append('<div id="Tab2_li_b" style="position:relative; height:50px; width: 100%; margin-left: auto; margin-right: auto;" > <img src="./img/b.png"  style="height: 50px; width:50px; display: inline-block;" onclick="serchCenter(), resizeMap2()"> </div>');
+  $("#Tab2_li").append('<div id="Tab2_li_b"  style="position:relative; height:50px; width: 100%; margin-left: auto; margin-right: auto;" > <img src="./img/b.png"  style="height: 50px; width:50px; display: inline-block;"  onclick="serchCenter(), resizeMap2()"></div>');
 }
 
 function serchCenter(){
@@ -75,16 +85,13 @@ function setLocation(i) {
 }
 
 function sharePosition(i) {
-console.log(i);
-
 var url = 'http://m.map.naver.com/route.nhn?menu=route&sname='+C.position[i].name+'&sx='+C.position[i].lng+'&sy='+C.position[i].lat+'&ename='+C.centerPosition.name+'&ex='+C.centerPosition.lng+'&ey='+C.centerPosition.lat+'&pathType=1&showMap=true';
-console.log(url)
-// navigator.share("1","1","1");
 window.plugins.socialsharing.share('[너와 나의 연결 거리]', null, null, url);
 }
 
 function findCenter() {
-  $('#pac-input').val("")
+  $('#pac-input').val("");
+  removeMarkers();
   if (C.position.length == C.people) {
 
     var total_lat = 0,
