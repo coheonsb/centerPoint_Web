@@ -69,6 +69,9 @@ function serchCenter(){
 
 function setLocation(i) {
   C.peopleIndex = i;
+  $$('body').on('touchstart', '.pac-container', function (e) {
+    e.stopImmediatePropagation();
+  })
 }
 
 function sharePosition(i) {
@@ -81,7 +84,7 @@ window.plugins.socialsharing.share('[너와 나의 연결 거리]', null, null, 
 }
 
 function findCenter() {
-
+  $('#pac-input').val("")
   if (C.position.length == C.people) {
 
     var total_lat = 0,

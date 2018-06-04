@@ -4,8 +4,8 @@ var $$ = Dom7;
 // Framework7 App main instance
 var app  = new Framework7({
   root: '#app', // App root element
-  id: 'io.framework7.testapp', // App bundle ID
-  name: 'Framework7', // App name
+  id: 'com.cheon.centerPoint', // App bundle ID
+  name: 'centerPoint', // App name
   theme: 'md', // Automatic theme detection
   fastclick:false,
   // App root data

@@ -3,9 +3,9 @@
   "display": "standalone",
   "name": "centerPoint_Web",
   "short_name": "centerPoint_Web",
-  "version": "com.phonegap.helloworld",
-  "description": "A basic Framework7 template for PhoneGap.",
-  "author": "Apache Cordova Team",
+  "version": "com.cheon.centerPoint",
+  "description": "너와 나의 연결 거리",
+  "author": "너와 나의 연결 거리",
   "icons": [],
   "start_url": "index.html",
   "theme_color": "#8AACC8"

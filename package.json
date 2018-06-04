@@ -1,7 +1,7 @@
 {
   "name": "framework7-template-single-view",
   "version": "1.0.0",
-  "description": "Framework7 single view app template",
+  "description": "너와 나의 연결 거리",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/framework7io/framework7-template-single-view.git"
@@ -69,9 +69,9 @@
       "cordova-plugin-x-socialsharing": {}
     },
     "platforms": [
-      "browser",
       "ios",
-      "android"
+      "android",
+      "browser"
     ]
   }
 }

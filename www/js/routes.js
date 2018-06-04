@@ -67,7 +67,7 @@ routes = [
             }
           }
         );
-      }, 1000);
+      }, 500);
     },
   },
   // Default route (404 page). MUST BE THE LAST

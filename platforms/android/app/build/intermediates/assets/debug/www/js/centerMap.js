@@ -12,7 +12,7 @@
                     lat: 37.556145,
                     lng: 127.073522
                   },
-                  zoom: 11,
+                  zoom: 15,
                   // mapTypeId: 'roadmap',
                   disableDefaultUI: true
                 });
@@ -117,7 +117,7 @@
                 var infowindow;
                 map2 = new google.maps.Map(document.getElementById('map2'), {
                   center: cPosition,
-                  zoom: 18,
+                  zoom: 15,
                   disableDefaultUI: true
                 });
 
@@ -135,7 +135,7 @@
                   if (status === google.maps.places.PlacesServiceStatus.OK) {
                     map2 = new google.maps.Map(document.getElementById('map2'), {
                       center: results[0].geometry.location,
-                      zoom: 18,
+                      zoom: 15,
                       disableDefaultUI: true
                     });
                     createMarker(results[0]);
