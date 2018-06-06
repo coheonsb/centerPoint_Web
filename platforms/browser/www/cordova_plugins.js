@@ -246,7 +246,6 @@ module.exports.metadata =
 {
     "cordova-plugin-battery-status": "2.0.2",
     "cordova-plugin-camera": "4.0.3",
-    "cordova-plugin-console": "1.0.7",
     "cordova-plugin-contacts": "3.0.1",
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-device-motion": "2.0.1",

@@ -25,9 +25,6 @@
     <feature name="Camera">
         <param name="ios-package" value="CDVCamera" />
     </feature>
-    <feature name="Console">
-        <param name="ios-package" value="CDVLogger" />
-    </feature>
     <feature name="Contacts">
         <param name="ios-package" value="CDVContacts" />
     </feature>
@@ -70,11 +67,37 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <splash src="res/screen/ios/logo.png" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <icon height="40" src="res/screen/ios/icon-40.png" width="40" />
     <icon height="58" src="res/screen/ios/icon-58.png" width="58" />
-    <splash height="2560" src="res/screen/ios/logo.png" width="1440" />
+    <icon height="180" src="res/screen/ios/Icon-180.png" width="180" />
+    <icon height="60" src="res/screen/ios/Icon-60.png" width="60" />
+    <icon height="120" src="res/screen/ios/Icon-120.png" width="120" />
+    <icon height="76" src="res/screen/ios/Icon-76.png" width="76" />
+    <icon height="152" src="res/screen/ios/Icon-152.png" width="152" />
+    <icon height="80" src="res/screen/ios/Icon-80.png" width="80" />
+    <icon height="57" src="res/screen/ios/Icon-57.png" width="57" />
+    <icon height="114" src="res/screen/ios/Icon-114.png" width="114" />
+    <icon height="72" src="res/screen/ios/Icon-72.png" width="72" />
+    <icon height="144" src="res/screen/ios/Icon-144.png" width="144" />
+    <icon height="29" src="res/screen/ios/Icon-29.png" width="29" />
+    <icon height="50" src="res/screen/ios/Icon-50.png" width="50" />
+    <icon height="100" src="res/screen/ios/Icon-100.png" width="100" />
+    <icon height="87" src="res/screen/ios/Icon-87.png" width="87" />
+    <icon height="167" src="res/screen/ios/Icon-167.png" width="167" />
+    <icon height="1024" src="res/screen/ios/Icon-1024.png" width="1024" />
+    <splash height="480" src="res/screen/ios/Default~iphone.png" width="320" />
+    <splash height="960" src="res/screen/ios/Default@2x~iphone.png" width="640" />
+    <splash height="1024" src="res/screen/ios/Default-Portrait~ipad.png" width="768" />
+    <splash height="2048" src="res/screen/ios/Default-Portrait@2x~ipad.png" width="1536" />
+    <splash height="768" src="res/screen/ios/Default-Landscape~ipad.png" width="1024" />
+    <splash height="1536" src="res/screen/ios/Default-Landscape@2x~ipad.png" width="2048" />
+    <splash height="1136" src="res/screen/ios/Default-568h@2x~iphone.png" width="640" />
+    <splash height="1334" src="res/screen/ios/Default-667h.png" width="750" />
+    <splash height="2208" src="res/screen/ios/Default-736h.png" width="1242" />
+    <splash height="1242" src="res/screen/ios/Default-Landscape-736h.png" width="2208" />
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="DisallowOverscroll" value="true" />
@@ -91,4 +114,5 @@
     <preference name="CameraUsesGeolocation" value="false" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="orientation" value="portrait" />
 </widget>

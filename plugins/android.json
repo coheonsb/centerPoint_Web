@@ -13,9 +13,6 @@
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "com.cheon.centerPoint"
     },
-    "cordova-plugin-console": {
-      "PACKAGE_NAME": "com.cheon.centerPoint"
-    },
     "cordova-plugin-contacts": {
       "PACKAGE_NAME": "com.cheon.centerPoint"
     },

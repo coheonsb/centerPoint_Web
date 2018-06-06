@@ -48,6 +48,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <splash src="res/screen/ios/logo.png" />
     <allow-intent href="market:*" />
     <icon src="res/screen/android/res.png" />
     <icon density="mdpi" src="res/screen/android/mdpi.png" />
@@ -63,6 +64,7 @@
     <splash density="land-mdpi" src="res/screen/android/logo.png" />
     <splash density="land-xhdpi" src="res/screen/android/logo.png" />
     <preference name="loglevel" value="DEBUG" />
+    <preference name="orientation" value="portrait" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="20" />
 </widget>

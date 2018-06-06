@@ -48,6 +48,10 @@
         "source": "C:\\Users\\coheo\\Desktop\\centerPoint_Web\\centerPoint_Web\\platforms\\android\\app\\src\\main\\res\\drawable-port-hdpi\\screen.png"
     },
     {
+        "merged": "C:\\Users\\coheo\\Desktop\\centerPoint_Web\\centerPoint_Web\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_screen.png.flat",
+        "source": "C:\\Users\\coheo\\Desktop\\centerPoint_Web\\centerPoint_Web\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\screen.png"
+    },
+    {
         "merged": "C:\\Users\\coheo\\Desktop\\centerPoint_Web\\centerPoint_Web\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_sharing_paths.xml.flat",
         "source": "C:\\Users\\coheo\\Desktop\\centerPoint_Web\\centerPoint_Web\\platforms\\android\\app\\src\\main\\res\\xml\\sharing_paths.xml"
     },

@@ -41,22 +41,6 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-console.console",
-    "file": "plugins/cordova-plugin-console/www/console-via-logger.js",
-    "pluginId": "cordova-plugin-console",
-    "clobbers": [
-      "console"
-    ]
-  },
-  {
-    "id": "cordova-plugin-console.logger",
-    "file": "plugins/cordova-plugin-console/www/logger.js",
-    "pluginId": "cordova-plugin-console",
-    "clobbers": [
-      "cordova.logger"
-    ]
-  },
-  {
     "id": "cordova-plugin-contacts.contacts",
     "file": "plugins/cordova-plugin-contacts/www/contacts.js",
     "pluginId": "cordova-plugin-contacts",
@@ -234,7 +218,6 @@ module.exports.metadata =
 {
   "cordova-plugin-battery-status": "2.0.2",
   "cordova-plugin-camera": "4.0.3",
-  "cordova-plugin-console": "1.0.7",
   "cordova-plugin-contacts": "3.0.1",
   "cordova-plugin-device": "2.0.2",
   "cordova-plugin-device-motion": "2.0.1",

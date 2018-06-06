@@ -4,15 +4,6 @@ routes = [
     url: './index.html',
   },
   {
-    path: '/about/',
-    url: './pages/about.html',
-  },
-  {
-    path: '/form/',
-    url: './pages/form.html',
-  },
-  // Page Loaders & Router
-  {
     path: '/page-loader-template7/:user/:userId/:posts/:postId/',
     templateUrl: './pages/page-loader-template7.html',
   },

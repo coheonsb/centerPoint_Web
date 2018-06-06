@@ -16,18 +16,15 @@
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="apple-touch-startup-image" href="img/logo3.png">
   <script src="./js/centerPointMain.js"></script>
   <script src="./js/centerMap.js"></script>
   <style>
-    /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
 
     #map {
       height: 100%;
       position: absolute;
     }
-
-    /* Optional: Makes the sample page fill the window. */
 
     html,
     body {
@@ -125,15 +122,11 @@
           </div>
           <!-- Tabs, tabs wrapper -->
           <div class="tabs">
-            <!-- Tab 1, active by default -->
             <div id="tab1" class="tab tab-active" style="background-color: #8aacc8">
-
               <div class="row center" style="position: relative; top: 45%; transform: translateY(-50%); ">
                 <div class="col">
-
                   <div style="width: 20%; height: 20%; margin:0 auto;">
                     <img src="./img/logo.png" style="height: 100%; width:100%;">
-
                   </div>
                   <script>
                     setTimeout(function () {
@@ -141,9 +134,7 @@
                     }, 1000);
 
                   </script>
-
                   <!-- <button class="button-fill" onClick="pageControl(2);">시작</button> -->
-
                 </div>
               </div>
 
@@ -153,10 +144,11 @@
             <div id="tab2" class="tab" style="background-color: #8aacc8" data-name="form">
               <div class="row center" style="position: relative; top: 45%; transform: translateY(-50%); ">
                 <div class="col">
-                  <div style="width: 70%; height: 100%; margin:0 auto;">
+                  <div style="width: 70%; height: 100%; margin:0 auto; max-width: 420px; max-height: 420px">
                     <img src="./img/main.png" style="height: 100%; width: 100%;">
 
                   </div>
+                  <br>
 
                   <div class="list" style="background: #68b5cc; width: 80%; margin:0 auto; border-radius: 10px">
 
@@ -180,31 +172,17 @@
                         </div>
                       </li>
                     </ul>
-
                   </div>
-
-
                   <br>
                   <button class="col button button-fill button-round" style="background: #68b5cc; width: 80%; margin:0 auto;" onclick="tab2ListCreate(),pageControl(3),resizeMap();">상세 위치 설정하러 가기</button>
-
-
-
                 </div>
               </div>
-
-
             </div>
             <!-- Tab 3 -->
             <div id="tab3" class="tab" style="background-color: #8aacc8">
               <div class="row center" style="position: relative; top: 45%; transform: translateY(-50%); ">
                 <div class="col">
-                  
-                  
-              
-
-
                   <div class="list" style="background: #68b5cc; width: 90%; margin:0 auto; border-radius: 10px">
-
                       <div style="float: left; width: 60%; text-align: center; color: white;">
                                 <p>중간지점을 찾아줍니다!</p>
                               </div>
@@ -225,20 +203,12 @@
                           </div>
                         </li>
                       </ul>
-  
                     </div>
                     <br>
-
-
-
                   <div style="list-style-type:none; text-align: center; position:relative; " id="Tab2_li"></div>
-
                 </div>
               </div>
             </div>
-
-
-
             <!-- Tab 4 -->
             <div id="tab4" class="tab" style="background-color: #8aacc8" data-name="form">
 
@@ -248,17 +218,13 @@
 
                     <div id="map" style="height: 100%; width: 100%;">
                     </div>
-                    <div class="block" style="width: 100%; position: fixed; padding: 0%; bottom:25px">
+                    <div class="block" style="width: 100%; position: fixed; padding: 0%; bottom:33px">
                       <div class="row"></div>
-                      <button class="col button button-fill button-round" style="background: #68b5cc; z-index: 100; margin:0 auto; width: 100%" onclick="pageControl(3), findCenter()">출발지 설정</button>
+                      <button class="col button button-fill button-round" style="background: #68b5cc; z-index: 100; margin:0 auto; width: 100%" onclick="pageControl(3)">출발지 설정</button>
                     </div>
-                
                 </div>
-
-
               </div>
             </div>
-
             <div id="tab5" class="tab" style="background-color: #8aacc8" data-name="form">
 
                 <div class="row center">
@@ -268,9 +234,7 @@
                     <script>
                       if (document.getElementById("tab5") != undefined) {
                         resizeMap2();
-    
                       }
-    
                     </script>
                     <div style="overflow:scroll;">              
                         <div style="list-style-type:none; text-align: center; position:relative;" id="Tab2_li_d">
@@ -282,72 +246,6 @@
     
     
               </div>
-          </div>
-
-          
-
-
-        </div>
-
-      </div>
-
-      <!-- Popup -->
-      <div class="popup" id="my-popup">
-        <div class="view">
-          <div class="page">
-            <div class="navbar">
-              <div class="navbar-inner">
-                <div class="title">Popup</div>
-                <div class="right">
-                  <a href="#" class="link popup-close">Close</a>
-                </div>
-              </div>
-            </div>
-            <div class="page-content">
-              <div class="block">
-                <p>Popup content goes here.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Login Screen -->
-      <div class="login-screen" id="my-login-screen">
-        <div class="view">
-          <div class="page">
-            <div class="page-content login-screen-content">
-              <div class="login-screen-title">Login</div>
-              <div class="list">
-                <ul>
-                  <li class="item-content item-input">
-                    <div class="item-inner">
-                      <div class="item-title item-label">Username</div>
-                      <div class="item-input-wrap">
-                        <input type="text" name="username" placeholder="Your username">
-                      </div>
-                    </div>
-                  </li>
-                  <li class="item-content item-input">
-                    <div class="item-inner">
-                      <div class="item-title item-label">Password</div>
-                      <div class="item-input-wrap">
-                        <input type="password" name="password" placeholder="Your password">
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="list">
-                <ul>
-                  <li>
-                    <a href="#" class="item-link list-button login-button">Sign In</a>
-                  </li>
-                </ul>
-                <div class="block-footer">Some text about login information.
-                  <br>Click "Sign In" to close Login Screen</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

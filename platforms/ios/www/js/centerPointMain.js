@@ -70,7 +70,14 @@ function tab2ListCreate() {
 }
 
 function serchCenter(){
-  if(C.people == C.position.length){
+var isFull = true;
+  for(var i= 0; i<C.people; i++){
+    if(C.position[i] == undefined){
+      isFull = false;
+    }
+  }
+  if(C.people == C.position.length && isFull){
+    findCenter();
     pageControl(5);
   }
   else{
