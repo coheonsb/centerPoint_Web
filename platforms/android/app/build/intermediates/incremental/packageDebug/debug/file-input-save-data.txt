@@ -1,6 +1,11 @@
 #Internal package file, do not edit.
+<<<<<<< HEAD
 #Wed Jun 06 23:44:31 KST 2018
 122.file=C\:\\Users\\coheo\\Desktop\\centerPoint_Web\\centerPoint_Web\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\www\\plugins\\cordova-plugin-network-information\\www\\Connection.js
+=======
+#Tue Jun 05 05:31:13 KST 2018
+122.file=C\:\\Users\\coheo\\Desktop\\centerPoint_Web\\centerPoint_Web\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\www\\img\\p1.png
+>>>>>>> 10d7980fa7feb66a59cf82ee159b60e09b5c304f
 60.set=ANDROID_RESOURCE
 129.file=C\:\\Users\\coheo\\Desktop\\centerPoint_Web\\centerPoint_Web\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\www\\plugins\\cordova-plugin-device-motion\\www\\accelerometer.js
 52.set=ASSET

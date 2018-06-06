@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Wed Jun 06 23:44:30 KST 2018
+=======
+#Tue Jun 05 05:31:13 KST 2018
+>>>>>>> 10d7980fa7feb66a59cf82ee159b60e09b5c304f
 base.0=C\:\\Users\\coheo\\Desktop\\centerPoint_Web\\centerPoint_Web\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
 file.0=C\:\\Users\\coheo\\Desktop\\centerPoint_Web\\centerPoint_Web\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex
